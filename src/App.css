@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: #fff5fb;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  height: 100vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+}
+
+.cabecalho_logo {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 35vh;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.cabecalho_logo > img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+
+  transition: all 0.8s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.container_botoes {
+  display: flex;
+  justify-content: center;
+
+  height: 45vh;
+  width: 100%;
+}
+
+.lista_botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  list-style: none;
+}
+
+.itens_botoes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 270px;
+  height: 40px;
+
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 700;
+
+  border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.01);
+  background: #fedbf1;
+  transition: all 0.8s;
+}
+
+.itens_botoes:hover {
+  width: 300px;
+
+  background-color: #fff;
+  box-shadow: 2px -1px 15px -5px rgba(0, 0, 0, 0.1);
+}
+
+.itens_botoes > div {
+  display: flex;
+
+  height: 80%;
+  width: 15%;
+}
+
+@keyframes go-back {
+  0% {
+    transform: translateX(300px);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.itens_botoes {
+  animation: go-back 1s;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 10vh;
+  width: 100%;
+
+  background: #fedbf1;
+}
+
+.footer_informativos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 10px;
+  font-family: Poppins;
+
+  transition: all 0.8s;
+}
+
+.footer_informativos > span > a {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (min-width: 900px) {
+  .cabecalho_logo > img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .itens_botoes {
+    width: 350px;
+  }
+
+  .itens_botoes:hover {
+    width: 400px;
+  }
+
+  .container_botoes {
+    height: 35vh;
+  }
+  .footer {
+    height: 15vh;
+    width: 100%;
+  }
+
+  .footer_informativos {
+    font-size: 14px;
   }
 }
